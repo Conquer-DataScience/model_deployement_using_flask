@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Model Deployement - IRIS Species Prediction </title>
+</head>
+
+ <body>
+ 
+    <h2 align="center">IRIS Species Prediction </h2>
+ <div class="center">   
+    <form action="{{url_for('predict')}}" method="post" >
+        <label for="sepal_length">Sepal Length:</label>
+        <input type="text" name="sepal_length" required="required" /><br/>
+        <label for="sepal_width">Sepal Width:</label>
+        <input type="text" name="sepal_width"  required="required" /><br/>
+        <label for="petal_length">Petal Length:</label>
+        <input type="text"  name="petal_length"  required="required" /><br/>
+        <label for="petal_width">Petal Width:</label>
+        <input type="text" name="petal_width" required="required" /><br/>      
+        <input type="submit" value="Predict" 
+                                class="btn btn-primary btn-block btn-large"/>
+      <br><br>    
+     {{ prediction_text }}
+    </form>    
+    </div>
+ </body>
+</html>
+
+
